@@ -14,7 +14,7 @@ SOURCE_DIR = src
 DOXYFILE = Doxyfile
 
 all:
-	cd src && $(CC) -c String.c -o String.o
+	cd src && $(CC) -c String.c -o String.o -Wall -Werror
 	cd src && ar rcs libString.a String.o
-	cd src && gcc StringTest.c -L. -lString
+	cd src && gcc StringTest.c -L. -lString -Wall -Werror
 	doxygen $(DOXYFILE)
