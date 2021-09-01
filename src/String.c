@@ -4,6 +4,7 @@
 String *CreateString(const char *src)
 {
     String *str = malloc(sizeof(String));
+    str->chars = NULL;
     if (str == NULL)
     {
         return NULL;
