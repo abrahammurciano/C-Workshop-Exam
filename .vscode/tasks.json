@@ -3,15 +3,63 @@
         {
             "type": "cppbuild",
             "label": "Build StringTest",
-            "command": "/usr/bin/gcc",
+            "command": "gcc",
             "args": [
                 "-g",
                 "-Wall",
                 "-Werror",
-                "*.c",
+                "StringTest.c",
                 "-o",
-                "${fileDirname}/a.out"
+                "a.out",
+                "-L.",
+                "-lString"
             ],
+            "options": {
+                "cwd": "src"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "Archive Library"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Archive Library",
+            "command": "ar",
+            "args": [
+                "rcs",
+                "libString.a",
+                "String.o"
+            ],
+            "options": {
+                "cwd": "src"
+            },
+            "dependsOn": [
+                "Build String"
+            ]
+        },
+        {
+            "type": "cppbuild",
+            "label": "Build String",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-c",
+                "String.c",
+                "-Wall",
+                "-Werror",
+                "-o",
+                "String.o"
+            ],
+            "options": {
+                "cwd": "src"
+            },
             "problemMatcher": [
                 "$gcc"
             ],
