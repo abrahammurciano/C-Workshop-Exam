@@ -5,13 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Run StringTest",
+            "name": "gcc - Build and debug active folder",
             "type": "cppdbg",
             "request": "launch",
-            "program": "a.out",
+            "program": "${fileDirname}/StringTest",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "src",
+            "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -22,7 +22,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build StringTest",
+            "preLaunchTask": "C/C++: gcc build active folder",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ]

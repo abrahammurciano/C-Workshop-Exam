@@ -134,5 +134,10 @@ int main(int argc, char **argv)
     result = result && TestCompareString();
     result = result && TestCopyString();
     result = result && TestAppendString();
-    return result ? 0 : -1;
+    if (result)
+    {
+        printf("Tests completed successfully\n");
+        return 0;
+    }
+    return -1;
 }
