@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['greeting_2ec_5',['greeting.c',['../Ex01_2greeting_8c.html',1,'(Global Namespace)'],['../Ex02_2greeting_8c.html',1,'(Global Namespace)']]],
-  ['greeting_2eh_6',['greeting.h',['../Ex01_2greeting_8h.html',1,'(Global Namespace)'],['../Ex02_2greeting_8h.html',1,'(Global Namespace)']]]
+  ['string_2ec_27',['String.c',['../String_8c.html',1,'']]],
+  ['string_2eh_28',['String.h',['../String_8h.html',1,'']]],
+  ['stringtest_2ec_29',['StringTest.c',['../StringTest_8c.html',1,'']]]
 ];

@@ -13,18 +13,10 @@ SOURCE_DIR = src
 # Doxygen options
 DOXYFILE = Doxyfile
 
-# locate project directory
-PROJECT_DIR = $(SOURCE_DIR)/$@
-
-# gather the list of source files
-SOURCES = $(wildcard $(PROJECT_DIR)/*.c)
-
-all:
-	python build.py
-
-docs:
+String:
+	cd src
+	$(CC) -c String.c -o String.o
+	ar rcs libString.a String.o
+	gcc StringTest.c -L. -lString
+	mkdir -p lib
 	doxygen $(DOXYFILE)
-
-# compile all the source files in a given directory
-%: $(SOURCES)
-	$(CC) $(CFLAGS) $(LIBS) -o $(PROJECT_DIR)/a.out $(SOURCES)
