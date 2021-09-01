@@ -13,10 +13,8 @@ SOURCE_DIR = src
 # Doxygen options
 DOXYFILE = Doxyfile
 
-String:
-	cd src
-	$(CC) -c String.c -o String.o
-	ar rcs libString.a String.o
-	gcc StringTest.c -L. -lString
-	mkdir -p lib
+all:
+	cd src && $(CC) -c String.c -o String.o
+	cd src && ar rcs libString.a String.o
+	cd src && gcc StringTest.c -L. -lString
 	doxygen $(DOXYFILE)
